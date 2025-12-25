@@ -1,0 +1,23 @@
+scout_task:
+  description: >
+    Search the web to find potential clients related to the website or industry provided.
+    Gather their names, URLs, and any basic info you can find.
+  expected_output: >
+    A list of 10 potential clients, each with name, URL, and a short description.
+  agent: scout
+
+analysis_task:
+  description: >
+    Review the list of potential clients and determine their main problem or business pain.
+    Focus on challenges related to growth, leads, efficiency, or visibility.
+  expected_output: >
+    A dictionary with each client as a key and their main issue as the value.
+  agent: analyst
+
+email_task:
+  description: >
+    Using the client issues provided, generate a personalized, concise email for each client.
+    Make sure it is human-centered, addresses their problem, and is not spammy.
+  expected_output: >
+    A dictionary with each client as a key and the corresponding email as the value.
+  agent: closer
